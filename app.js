@@ -13,8 +13,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 
-// mongoose.connect("mongodb+srv://Tron:jTzHQOHJQ0UalnSR@cluster0.wh2ictk.mongodb.net/?retryWrites=true&w=majority/todolistDB");
-mongoose.connect("mongodb+srv://Tron:jTzHQOHJQ0UalnSR@cluster0.wh2ictk.mongodb.net/todolistDB?retryWrites=true&w=majority");
+// // mongoose.connect("mongodb+srv://Tron:jTzHQOHJQ0UalnSR@cluster0.wh2ictk.mongodb.net/?retryWrites=true&w=majority/todolistDB");
+ mongoose.connect("mongodb+srv://Tron:jTzHQOHJQ0UalnSR@cluster0.wh2ictk.mongodb.net/todolistDB?retryWrites=true&w=majority");
 
 const itemsSchema = {
   name: String
@@ -168,11 +168,11 @@ app.get("/about", function (req, res) {
   res.render("about");
 });
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 3000;
-}
-app.listen(port);
+// let port = process.env.PORT;
+// if (port == null || port == "") {
+//   port = 3000;
+// }
+// app.listen(port);
 
 app.listen(3000, function () {
   console.log("Server started Succesfully");
